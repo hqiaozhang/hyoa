@@ -1,0 +1,127 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _index = require('E:\\workSpaces\\hyoa\\node_modules\\redbox-react\\lib\\index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require('E:\\workSpaces\\hyoa\\node_modules\\react-transform-catch-errors\\lib\\index.js');
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index5 = require('E:\\workSpaces\\hyoa\\node_modules\\react-transform-hmr\\lib\\index.js');
+
+var _index6 = _interopRequireDefault(_index5);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _newestList = require('./newestList');
+
+var _newestList2 = _interopRequireDefault(_newestList);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    Content: {
+        displayName: 'Content'
+    }
+};
+
+var _EWorkSpacesHyoaNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+    filename: 'E:/workSpaces/hyoa/app/src/components/home/content.js',
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+});
+
+var _EWorkSpacesHyoaNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+    filename: 'E:/workSpaces/hyoa/app/src/components/home/content.js',
+    components: _components,
+    locals: [],
+    imports: [_react3.default, _index2.default]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _EWorkSpacesHyoaNode_modulesReactTransformHmrLibIndexJs2(_EWorkSpacesHyoaNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+    };
+}
+
+/**
+ * 
+ * 
+ * @class Content
+ * @extends {Component}
+ */
+var Content = _wrapComponent('Content')(function (_Component) {
+    _inherits(Content, _Component);
+
+    function Content(props) {
+        _classCallCheck(this, Content);
+
+        return _possibleConstructorReturn(this, Object.getPrototypeOf(Content).call(this, props));
+    }
+
+    _createClass(Content, [{
+        key: 'render',
+        value: function render() {
+            var lists = [{
+                title: '团建活动通知：下午2点开始',
+                time: '2017-01-07'
+            }, {
+                title: '团建活动通知：下午2点开始',
+                time: '2017-01-07'
+            }, {
+                title: '团建活动通知：下午2点开始',
+                time: '2017-01-07'
+            }, {
+                title: '团建活动通知：下午2点开始',
+                time: '2017-01-07'
+            }, {
+                title: '团建活动通知：下午2点开始',
+                time: '2017-01-07'
+            }];
+            return _react3.default.createElement(
+                'div',
+                { className: 'content-block' },
+                _react3.default.createElement(
+                    'div',
+                    { className: 'header' },
+                    _react3.default.createElement('i', { className: this.props.data.icon }),
+                    _react3.default.createElement(
+                        'span',
+                        { className: this.props.data.title },
+                        this.props.data.text
+                    ),
+                    _react3.default.createElement(
+                        'span',
+                        { className: 'more' },
+                        '\u66F4\u591A>>'
+                    )
+                ),
+                _react3.default.createElement(
+                    'div',
+                    { className: 'new-list' },
+                    _react3.default.createElement(_newestList2.default, { lists: lists })
+                )
+            );
+        }
+    }]);
+
+    return Content;
+}(_react2.Component));
+
+exports.default = Content;

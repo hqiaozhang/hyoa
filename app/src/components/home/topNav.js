@@ -28,12 +28,10 @@ const styles = {
 export default class TopNav extends Component {
  render(){
     var navs = this.props.navs
-    console.log(navs)
     return (
       <ul style={styles.ul}>
       {
         navs.map( (navs) => {
-          console.log(navs.url)
           return (
              <li style={styles.lis} key={navs.key} className={navs.iconName}>
                 <i className='iconfont'></i><span style={styles.span}>{navs.value}</span> 

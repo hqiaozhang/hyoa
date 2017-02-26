@@ -1,0 +1,42 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _axios = require('axios');
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _authUtil = require('../util/authUtil');
+
+var _config = require('../../../config');
+
+var _config2 = _interopRequireDefault(_config);
+
+var _requestURL = require('../constants/requestURL');
+
+var _requestURL2 = _interopRequireDefault(_requestURL);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+require('es6-promise').polyfill();
+var NOTICE_LIST = _requestURL2.default.NOTICE_LIST;
+
+/**
+ * 使用axios调用后台接口，所有请求的方法暂时都放这里
+ * @autor zhanghq
+ */
+
+exports.default = {
+  /**
+  * 查询所有公告，暂时不分页
+  * @param {}
+  * @returns promise对象，调用then方法后，获取查询到的数据
+  */
+  getNoticeList: function getNoticeList(data) {
+    console.log('请求公告数据');
+    console.log(data, NOTICE_LIST);
+    return _axios2.default.get(NOTICE_LIST, data);
+  }
+};

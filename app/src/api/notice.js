@@ -21,7 +21,7 @@ export default {
    */
   getNoticeList: function(data) {
     console.log('请求公告数据')
-      console.log(data)
+      console.log(data, NOTICE_LIST)
      return axios.get(NOTICE_LIST, data)
   },
 }

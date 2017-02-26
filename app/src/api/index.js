@@ -72,6 +72,7 @@ export default {
    * @returns promise对象，调用then方法后，获取查询到的数据
    */
   getNewsList: function(data) {
+    console.log('查询所有公告，暂时不分页data', data)
     return axios.get(LOAD_NEWSLIST_URL, data)
   },
 

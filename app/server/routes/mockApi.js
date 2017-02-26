@@ -143,7 +143,7 @@ var mockData = {
   ]
 }
 
-export const newsList = [
+export const noticeList = [
   {
     title: '关于春节放假的通知',
     time: '2017-01-23',

@@ -21,8 +21,8 @@ export default class NoticeList extends Component {
               let id = data.id
               index < 3 ? style = {} : style = { paddingLeft: '2%', width: '95.5%' }
               return (
-                <Link to={`/index/notice/${id}`}>
-                  <li key={index} style={style}>  
+                <Link to={`/index/notice/${id}`} key={index}>
+                  <li style={style}>  
                     { index < 3 ? <div className="new-icon"></div> : '' }
                     <h4>{data.title}</h4>
                     <span className='time'>{data.time}</span>

@@ -7,7 +7,7 @@ import formidable from 'formidable'
 import RestResult from '../RestResult'
 import { getEntity } from '../models/dbHandle'
 import { readExcelFile } from '../util'
-import { getChartData, items, getUser, getItem, navs } from './mockApi'
+import { getChartData, items, getUser, getItem, navs, noticeList } from './mockApi'
 let router = express.Router()
 
 export default function(io) {
@@ -92,6 +92,10 @@ export default function(io) {
 
   router.get('/api/newsList', (req, res)=> {
     res.send(items);
+  })
+
+   router.get('/api/noticeList', (req, res)=> {
+    res.send(noticeList);
   })
 
   router.get('/api/navs/:id', (req, res)=> {

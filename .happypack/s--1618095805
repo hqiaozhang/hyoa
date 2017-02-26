@@ -1,0 +1,239 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = require('E:\\workSpaces\\hyoa\\node_modules\\redbox-react\\lib\\index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require('E:\\workSpaces\\hyoa\\node_modules\\react-transform-catch-errors\\lib\\index.js');
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index5 = require('E:\\workSpaces\\hyoa\\node_modules\\react-transform-hmr\\lib\\index.js');
+
+var _index6 = _interopRequireDefault(_index5);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+var _reactRedux = require('react-redux');
+
+var _reactRouter = require('react-router');
+
+var _reactDropzone = require('react-dropzone');
+
+var _reactDropzone2 = _interopRequireDefault(_reactDropzone);
+
+var _home = require('../actions/home');
+
+var _user = require('../actions/user');
+
+var _nav = require('../components/home/nav');
+
+var _nav2 = _interopRequireDefault(_nav);
+
+var _header = require('../components/home/header');
+
+var _header2 = _interopRequireDefault(_header);
+
+var _content = require('../components/home/content');
+
+var _content2 = _interopRequireDefault(_content);
+
+var _topNav = require('../components/home/topNav');
+
+var _topNav2 = _interopRequireDefault(_topNav);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  Home: {
+    displayName: 'Home'
+  }
+};
+
+var _EWorkSpacesHyoaNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+  filename: 'E:/workSpaces/hyoa/app/src/containers/home.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+var _EWorkSpacesHyoaNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+  filename: 'E:/workSpaces/hyoa/app/src/containers/home.js',
+  components: _components,
+  locals: [],
+  imports: [_react3.default, _index2.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _EWorkSpacesHyoaNode_modulesReactTransformHmrLibIndexJs2(_EWorkSpacesHyoaNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+  };
+}
+
+var styles = {
+  a: {
+    color: '#ccc'
+  },
+  out: {
+    position: 'absolute',
+    top: '45px',
+    left: '260px',
+    color: 'red',
+    cursor: 'pointer'
+  },
+  fileSelect: {
+    width: '700px',
+    textAlign: 'center',
+    paddingTop: '150px',
+    background: 'azure',
+    color: 'brown',
+    border: '2px dashed rgb(102, 102, 102)',
+    height: '200px',
+    borderRadius: '5px'
+  }
+};
+
+function mapStateToProps(state) {
+  //debugger
+  return {
+    items: state.home.items,
+    navs: state.home.navs
+  };
+}
+
+var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToProps, { loadNavs: _home.loadNavs, logout: _user.logout, uploadUserInfo: _home.uploadUserInfo }), _dec(_class = function (_Component) {
+  _inherits(Home, _Component);
+
+  function Home(props) {
+    _classCallCheck(this, Home);
+
+    // this.userSignOut = this.userSignOut.bind(this)
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Home).call(this, props));
+
+    _this.uploadFile = _this.uploadFile.bind(_this);
+    return _this;
+  }
+
+  _createClass(Home, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.props.loadNavs();
+    }
+  }, {
+    key: 'uploadFile',
+    value: function uploadFile(acceptedFiles, rejectedFiles) {
+
+      var form = new FormData();
+      form.append('file', acceptedFiles[0]);
+
+      this.props.uploadUserInfo(form);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var navs = this.props.navs;
+      var notice = {
+        text: '最新公告',
+        icon: 'notice-icon',
+        title: 'notice-text'
+      };
+
+      var book = {
+        text: '图书信息',
+        icon: 'book-icon',
+        title: 'book-text'
+      };
+
+      return _react3.default.createElement(
+        'div',
+        { className: 'container' },
+        _react3.default.createElement(
+          'div',
+          { className: 'header-container' },
+          _react3.default.createElement(_header2.default, { logout: this.props.logout })
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'navs-container' },
+          _react3.default.createElement(_nav2.default, { clickLi: this.toggleNav, navs: navs })
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'contents-container' },
+          this.props.children ? this.props.children : _react3.default.createElement(
+            'div',
+            { className: 'sub-content' },
+            _react3.default.createElement(
+              'div',
+              { className: 'top-nav' },
+              _react3.default.createElement(_topNav2.default, { navs: navs })
+            ),
+            _react3.default.createElement(
+              'div',
+              { className: 'notice' },
+              _react3.default.createElement(_content2.default, { data: notice })
+            ),
+            _react3.default.createElement(
+              'div',
+              { className: 'book' },
+              _react3.default.createElement(_content2.default, { data: book })
+            ),
+            _react3.default.createElement(
+              'div',
+              { className: 'project' },
+              _react3.default.createElement(
+                'div',
+                { className: 'title' },
+                '\u9879\u76EE\u52A8\u6001',
+                _react3.default.createElement(
+                  'span',
+                  null,
+                  '\u66F4\u591A>>'
+                )
+              ),
+              _react3.default.createElement('div', { className: 'list' })
+            ),
+            _react3.default.createElement(
+              'div',
+              { style: { display: 'none' } },
+              _react3.default.createElement(
+                _reactDropzone2.default,
+                { style: styles.fileSelect, accept: 'image/*, application/*', onDrop: this.uploadFile },
+                _react3.default.createElement(
+                  'div',
+                  null,
+                  'Try dropping some files here, or click to select files to upload'
+                )
+              ),
+              _react3.default.createElement(
+                _reactRouter.Link,
+                { style: styles.a, to: 'index/list' },
+                '\u5217\u8868\u9879'
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Home;
+}(_react2.Component)) || _class));
+
+exports.default = Home;

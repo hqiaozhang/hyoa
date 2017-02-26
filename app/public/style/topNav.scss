@@ -1,0 +1,112 @@
+/*字体图标*/
+/*.icon-home{
+  background: #64bcf1;
+}*/
+.top-nav i:before{
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  border-radius: 50%;
+  display: block;
+  float: left;
+  background: #64bcf1;
+  line-height: 60px;
+  margin-bottom: 10px;
+}
+.top-nav .home i:before { 
+  font-size: 34px;
+  content: "\e60b"; 
+  line-height: 50px;
+}
+
+.top-nav .gonggao i:before { 
+  content: "\e604"; 
+   background: #fbba32;
+   line-height: 55px;
+}
+
+.top-nav .flow i:before { 
+  content: "\e63f"; 
+  font-size: 32px;
+  background: #8ac22f;
+}
+.top-nav .info i:before { 
+  content: "\e6fb"; 
+  background: #27bec9;
+  font-size: 30px;
+  line-height: 65px;
+}
+
+.top-nav .jixiao i:before { 
+  content: "\e60a"; 
+  font-size: 38px;
+  background: #77c4f2;
+}
+
+.top-nav .project-manage i:before { 
+  content: "\e6a7"; 
+  font-size: 42px;
+  background: #b7b3f0;
+}
+
+.top-nav .check i:before { 
+  content: "\e65c"; 
+  background: #fab6a7;
+  font-size: 30px;
+}
+
+.top-nav .books i:before { 
+  content: "\e656";
+  background: #9ebcd8; 
+  line-height: 65px;
+  font-size: 30px;
+}
+
+/*信息列表*/
+.new-list{
+  width: 532px;
+  background: #fff;
+  
+}
+.new-list .title i{
+  font-size: 20px;
+}
+.new-list .title{
+  height: 45px;
+  background: #eef4f8;
+  font-size: 16px;
+  
+  line-height: 45px;
+  border-top: 3px solid #9ad0f0;
+  width: 96%;
+  padding: 0 2%;
+}
+.new-list .title i{
+  margin-right: 5px;
+}
+.new-list .title span{
+  color: #8ea0bb;
+  font-size: 12px;
+  float: right;
+}
+.new-list .content{
+  width: 90%;
+
+  font-size: 14px;
+  padding: 2% 5%;
+}
+.new-list .content li{
+  border-bottom: dotted 1px #ccc;
+  padding: 3% 2%;
+  color: #333;
+}
+.new-list .content li:hover{
+  color: #000;
+}
+.new-list .content li:last-child{
+  border: none;
+}
+.new-list .content span{
+  float: right;
+  font-size: 12px;
+}

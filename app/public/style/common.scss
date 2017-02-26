@@ -1,0 +1,65 @@
+/*base css*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dd,
+ul,
+ol,
+li,
+form,
+input,
+textarea,
+th,
+td,
+select,
+i {
+  margin: 0;
+  padding: 0;
+  border:none;
+
+}
+em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+  color:#fff;
+}
+
+
+/*使用字体图标*/
+/*第一步：拷贝项目下面生成的font-face*/
+body{
+  
+  font-family: '微软雅黑';
+}
+
+/*引用字体图标*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/iconfont.woff') format('woff'),
+  url('../font/iconfont.ttf') format('truetype'),
+  url('../font/iconfont.svg#iconfont') format('svg');
+}
+/*第二步：定义使用iconfont的样式*/
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:28px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+

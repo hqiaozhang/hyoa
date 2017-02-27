@@ -9,13 +9,10 @@ exports.default = function () {
   var action = arguments[1];
 
   switch (action.type) {
-    // case LOAD_NEW_LIST_REQUEST:
-    //   return assign({}, state, {isFetching: true})
     case _actionType.NOTICE_LIST_SUCCESS:
       return (0, _objectAssign2.default)({}, state, { noticeList: action.response });
-    case _actionType.NOTICE_LIST_FAILURE:
-      break;
-
+    // case NOTICE_LIST_FAILURE:
+    //   break;
     default:
       return state;
   }

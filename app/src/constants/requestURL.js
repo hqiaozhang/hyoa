@@ -11,5 +11,6 @@ export default {
     LOGIN_URL: '/api/login',
     LOAD_NEWS_DETAIL_URL: '/api/newdetail',
     UPLOAD_USERINFO_URL: '/api/uploaduserinfo',
-    NOTICE_LIST: '/aip/noticeList'
+    NEW_NOTICE_URL: '/api/newNotice',
+    NOTICE_LIST_URL: '/api/noticeList'
 }

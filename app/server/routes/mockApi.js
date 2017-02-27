@@ -175,6 +175,15 @@ export const noticeList = [
   }
 ]
 
+//最新公告
+export const newNotice = [
+  {
+    title: '1'
+  }
+]
+
+
+
 
 export const items = mockData.albums//_.range(1, 10).map((i)=> item(i))
 

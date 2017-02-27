@@ -94,8 +94,8 @@ export default function(io) {
     res.send(items);
   })
 
-   router.get('/api/noticeList', (req, res)=> {
-    res.send(noticeList);
+   router.get('/api/newNotice', (req, res)=> {
+    res.send(newNotice);
   })
 
   router.get('/api/navs/:id', (req, res)=> {
@@ -108,6 +108,10 @@ export default function(io) {
 
   router.get('/api/newdetail/:id', (req, res)=> {
     res.send(getItem(req.params.id))
+  })
+
+  router.get('/api/noticeList', (req, res)=> {
+    res.send(noticeList);
   })
 
   router.post('/api/uploaduserinfo', (req, res) => {

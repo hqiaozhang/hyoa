@@ -80,39 +80,9 @@ function _wrapComponent(id) {
    *  @describe  [公司公告]
    */
 
-var noticeData = [{
-  title: '关于春节放假的通知',
-  time: '2017-01-23',
-  content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如',
-  id: '001'
-}, {
-  title: '关于春节放假的通知',
-  time: '2017-01-23',
-  content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如',
-  id: '002'
-}, {
-  title: '关于春节放假的通知',
-  time: '2017-01-23',
-  content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如',
-  id: '003'
-}, {
-  title: '关于春节放假的通知',
-  time: '2017-01-23',
-  content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如',
-  id: '004'
-}, {
-  title: '关于春节放假的通知',
-  time: '2017-01-23',
-  content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如'
-}, {
-  title: '关于春节放假的通知',
-  time: '2017-01-23',
-  content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如'
-}];
-
 function mapStateToProps(state) {
   console.log('当前state', state);
-  return { items: state.home.items };
+  return state.notice;
 }
 
 function mapDispatchToProps(dispatch) {
@@ -133,16 +103,18 @@ var Notice = _wrapComponent('Notice')((_dec = (0, _reactRedux.connect)(mapStateT
     value: function componentDidMount() {
       var loadNoticeList = this.props.actions.loadNoticeList;
 
+
       loadNoticeList();
     }
   }, {
     key: 'render',
     value: function render() {
-      console.log('this.props.items', this.props);
+      console.log('this.props.noticeList', this.props);
+      var noticeList = this.props.noticeList;
       return _react3.default.createElement(
         'div',
         { className: 'notice-main' },
-        _react3.default.createElement(_noticeList2.default, { lists: noticeData }),
+        _react3.default.createElement(_noticeList2.default, { lists: noticeList }),
         _react3.default.createElement(_noticePage2.default, null)
       );
     }

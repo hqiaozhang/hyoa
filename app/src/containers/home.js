@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import Dropzone from 'react-dropzone'
-import { loadNavs, uploadUserInfo } from '../actions/home'
+import { loadNavs, uploadUserInfo, loadNewNotice } from '../actions/home'
 import { localLogin, logout } from '../actions/user'
 import Navs from '../components/home/nav'
 import Header from '../components/home/header'
@@ -36,11 +36,13 @@ function mapStateToProps(state) {
   //debugger
   return {
     items: state.home.items,
-    navs: state.home.navs
+    navs: state.home.navs,
+    notice: state.notice,
+    books: state.books
   }
 }
 
-@connect(mapStateToProps, { loadNavs, logout, uploadUserInfo })
+@connect(mapStateToProps, { loadNavs, logout, uploadUserInfo, loadNewNotice })
 export default class Home extends Component {
   constructor(props) {
     super(props)
@@ -50,6 +52,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     this.props.loadNavs()
+    this.props.loadNewNotice()
   }
 
   uploadFile(acceptedFiles, rejectedFiles) {

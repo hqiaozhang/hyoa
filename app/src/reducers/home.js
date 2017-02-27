@@ -1,14 +1,15 @@
 
 import { LOAD_NEW_LIST_SUCCESS,
   NEWS_DETAIL_FAILURE,
-  NEWS_DETAIL_SUCCESS, LOAD_NAVS_SUCCESS } from '../constants/actionType'
+  NEWS_DETAIL_SUCCESS, LOAD_NAVS_SUCCESS, NOTICE_LIST, NEW_NOTICE_SUCCESS } from '../constants/actionType'
 import assign from 'object-assign'
 
 let initialState = {
   isFetching: false,
   items: [],
   newsDetail: {},
-  navs: []
+  navs: [],
+  newNotice: []
 }
 
 export default function (state = initialState, action) {
@@ -23,6 +24,8 @@ export default function (state = initialState, action) {
       break;
     case LOAD_NAVS_SUCCESS:
       return assign({}, state, {navs: action.response})
+    case NEW_NOTICE_SUCCESS:
+      return assign({}, state, {newNotice: action.response})
     default:
       return state
   }

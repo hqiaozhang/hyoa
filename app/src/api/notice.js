@@ -4,7 +4,7 @@ import { getCookie, signOut } from '../util/authUtil'
 import baseConfig from '../../../config'
 import reqURL from '../constants/requestURL'
 
-const { NOTICE_LIST } = reqURL
+const { NOTICE_LIST_URL } = reqURL
 
 
 /**
@@ -20,8 +20,6 @@ export default {
    * @returns promise对象，调用then方法后，获取查询到的数据
    */
   getNoticeList: function(data) {
-    console.log('请求公告数据')
-      console.log(data, NOTICE_LIST)
-     return axios.get(NOTICE_LIST, data)
+     return axios.get(NOTICE_LIST_URL, data)
   },
 }

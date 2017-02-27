@@ -8,7 +8,8 @@ const { LOGIN_URL, LOAD_USER_URL,
   LOAD_NEWSLIST_URL,
   LOAD_NEWS_DETAIL_URL,
   LOAD_NAVS_URL,
-  UPLOAD_USERINFO_URL } = reqURL
+  UPLOAD_USERINFO_URL,
+  NEW_NOTICE_URL } = reqURL
 
 //axios.defaults.baseURL = API_BASE_URL
 axios.defaults.withCredentials = true
@@ -74,6 +75,16 @@ export default {
   getNewsList: function(data) {
     console.log('查询所有公告，暂时不分页data', data)
     return axios.get(LOAD_NEWSLIST_URL, data)
+  },
+
+  /**
+   * 查询最新公告，暂时不分页zhq
+   * @param {}
+   * @returns promise对象，调用then方法后，获取查询到的数据
+   */
+  getNewNotice: function(data){
+    console.log('查询最新公告', data)
+    return axios.get(NEW_NOTICE_URL, data)
   },
 
   /**

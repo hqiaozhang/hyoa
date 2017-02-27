@@ -28,6 +28,7 @@ var LOAD_NEWSLIST_URL = _requestURL2.default.LOAD_NEWSLIST_URL;
 var LOAD_NEWS_DETAIL_URL = _requestURL2.default.LOAD_NEWS_DETAIL_URL;
 var LOAD_NAVS_URL = _requestURL2.default.LOAD_NAVS_URL;
 var UPLOAD_USERINFO_URL = _requestURL2.default.UPLOAD_USERINFO_URL;
+var NEW_NOTICE_URL = _requestURL2.default.NEW_NOTICE_URL;
 
 //axios.defaults.baseURL = API_BASE_URL
 
@@ -94,6 +95,16 @@ exports.default = {
   getNewsList: function getNewsList(data) {
     console.log('查询所有公告，暂时不分页data', data);
     return _axios2.default.get(LOAD_NEWSLIST_URL, data);
+  },
+
+  /**
+   * 查询最新公告，暂时不分页zhq
+   * @param {}
+   * @returns promise对象，调用then方法后，获取查询到的数据
+   */
+  getNewNotice: function getNewNotice(data) {
+    console.log('查询最新公告', data);
+    return _axios2.default.get(NEW_NOTICE_URL, data);
   },
 
   /**

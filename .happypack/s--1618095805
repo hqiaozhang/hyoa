@@ -113,11 +113,13 @@ function mapStateToProps(state) {
   //debugger
   return {
     items: state.home.items,
-    navs: state.home.navs
+    navs: state.home.navs,
+    notice: state.notice,
+    books: state.books
   };
 }
 
-var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToProps, { loadNavs: _home.loadNavs, logout: _user.logout, uploadUserInfo: _home.uploadUserInfo }), _dec(_class = function (_Component) {
+var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToProps, { loadNavs: _home.loadNavs, logout: _user.logout, uploadUserInfo: _home.uploadUserInfo, loadNewNotice: _home.loadNewNotice }), _dec(_class = function (_Component) {
   _inherits(Home, _Component);
 
   function Home(props) {
@@ -134,6 +136,7 @@ var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToPro
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.props.loadNavs();
+      this.props.loadNewNotice();
     }
   }, {
     key: 'uploadFile',

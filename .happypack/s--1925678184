@@ -19,6 +19,8 @@ exports.default = function () {
       break;
     case _actionType.LOAD_NAVS_SUCCESS:
       return (0, _objectAssign2.default)({}, state, { navs: action.response });
+    case _actionType.NEW_NOTICE_SUCCESS:
+      return (0, _objectAssign2.default)({}, state, { newNotice: action.response });
     default:
       return state;
   }
@@ -36,5 +38,6 @@ var initialState = {
   isFetching: false,
   items: [],
   newsDetail: {},
-  navs: []
+  navs: [],
+  newNotice: []
 };

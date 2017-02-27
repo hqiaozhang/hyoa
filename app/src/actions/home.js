@@ -14,6 +14,19 @@ export const loadNewsList = () => {
   }
 }
 
+
+/**
+ * 加载所有公司公告列表，先不分页，后面内容多了需要添加分页
+ * 
+ * @returns action
+ */
+export const loadNewNotice = () => {
+  return {
+    type: actionType.NEW_NOTICE,
+    promise: api.getNewNotice()
+  }
+}
+
 /**
  * 加载公告详情
  * 详细描述：

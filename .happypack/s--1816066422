@@ -78,22 +78,8 @@ var Content = _wrapComponent('Content')(function (_Component) {
     _createClass(Content, [{
         key: 'render',
         value: function render() {
-            var lists = [{
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-            }, {
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-            }, {
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-            }, {
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-            }, {
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-            }];
+            var newList = this.props.data.newList;
+
             return _react3.default.createElement(
                 'div',
                 { className: 'content-block' },
@@ -115,7 +101,7 @@ var Content = _wrapComponent('Content')(function (_Component) {
                 _react3.default.createElement(
                     'div',
                     { className: 'new-list' },
-                    _react3.default.createElement(_newestList2.default, { lists: lists })
+                    _react3.default.createElement(_newestList2.default, { lists: newList })
                 )
             );
         }

@@ -95,12 +95,12 @@ var Nav = _wrapComponent('Nav')(function (_Component) {
     }, {
         key: 'handleClick',
         value: function handleClick(id) {
-            console.log(id);
+            //console.log(id)
             var current = (0, _lodash.filter)(this.props.navs, function (nav) {
                 return nav.key == id;
             });
 
-            console.log(this.state.currentId, id);
+            //console.log(this.state.currentId, id)
             this.setState({
                 showItem: this.state.currentId == id ? !this.state.showItem : true,
                 currentId: id,
@@ -120,7 +120,7 @@ var Nav = _wrapComponent('Nav')(function (_Component) {
         value: function render() {
             var _this2 = this;
 
-            console.log(this.state);
+            //console.log(this.state)
             var navs = this.props.navs;
             var len = this.state.currentSubItems.children ? 55 + this.state.currentSubItems.children.length * 27 : 55;
             return _react3.default.createElement(

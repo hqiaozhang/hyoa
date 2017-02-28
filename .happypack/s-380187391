@@ -11,6 +11,8 @@ exports.default = function () {
   switch (action.type) {
     case _actionType.NOTICE_LIST_SUCCESS:
       return (0, _objectAssign2.default)({}, state, { noticeList: action.response });
+    case _actionType.NOTICE_DETAILS_SUCCESS:
+      return (0, _objectAssign2.default)({}, state, { noticeDetails: action.response });
     // case NOTICE_LIST_FAILURE:
     //   break;
     default:
@@ -27,5 +29,6 @@ var _objectAssign2 = _interopRequireDefault(_objectAssign);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var initialState = {
-  noticeList: []
+  noticeList: [],
+  noticeDetails: []
 };

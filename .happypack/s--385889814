@@ -103,7 +103,6 @@ var Notice = _wrapComponent('Notice')((_dec = (0, _reactRedux.connect)(mapStateT
     value: function componentDidMount() {
       var loadNoticeList = this.props.actions.loadNoticeList;
 
-
       loadNoticeList();
     }
   }, {

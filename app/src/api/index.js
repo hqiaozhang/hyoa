@@ -104,6 +104,8 @@ export default {
   getNavs: function(token) {
     return axios.get(LOAD_NAVS_URL + '/' + token)
   },
+
+  
   uploadUserInfo: function(data) {
     return axios.post(UPLOAD_USERINFO_URL, data)
   }

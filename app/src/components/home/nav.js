@@ -26,12 +26,12 @@ export default class Nav extends Component {
         })
     }
     handleClick(id) {
-        console.log(id)
+        //console.log(id)
         let current = filter(this.props.navs, function(nav) {
             return nav.key == id
         })
         
-        console.log(this.state.currentId, id)
+        //console.log(this.state.currentId, id)
         this.setState({
             showItem: this.state.currentId == id ? !this.state.showItem : true,
             currentId: id,
@@ -47,7 +47,7 @@ export default class Nav extends Component {
     }
 
     render() {
-        console.log(this.state)
+        //console.log(this.state)
         let navs = this.props.navs
         let len = this.state.currentSubItems.children ? 55 + this.state.currentSubItems.children.length * 27 : 55
         return (

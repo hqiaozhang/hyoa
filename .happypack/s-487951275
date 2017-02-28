@@ -22,6 +22,18 @@ var _index6 = _interopRequireDefault(_index5);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _dec, _class;
+
+var _reactRedux = require('react-redux');
+
+var _notice = require('../actions/notice');
+
+var actionCreators = _interopRequireWildcard(_notice);
+
+var _redux = require('redux');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66,7 +78,16 @@ var data = {
   content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如下 为方便小伙伴们更好的为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如下 为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如下安排春节假期人，公司决定调整放假具体如下'
 };
 
-var NoticeComtent = _wrapComponent('NoticeComtent')(function (_Component) {
+function mapStateToProps(state) {
+  console.log('当前state', state);
+  return { notice: state.notice };
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: (0, _redux.bindActionCreators)(actionCreators, dispatch) };
+}
+
+var NoticeComtent = _wrapComponent('NoticeComtent')((_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps), _dec(_class = function (_Component) {
   _inherits(NoticeComtent, _Component);
 
   function NoticeComtent() {
@@ -76,8 +97,19 @@ var NoticeComtent = _wrapComponent('NoticeComtent')(function (_Component) {
   }
 
   _createClass(NoticeComtent, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var id = this.props.params.id;
+      var loadNoticeDetails = this.props.actions.loadNoticeDetails;
+
+      console.log('当前id', id);
+      loadNoticeDetails(id);
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var data = this.props.notice.noticeDetails;
+      console.log('this.props', this.props);
       return _react3.default.createElement(
         'div',
         { className: 'notice-content' },
@@ -106,6 +138,6 @@ var NoticeComtent = _wrapComponent('NoticeComtent')(function (_Component) {
   }]);
 
   return NoticeComtent;
-}(_react2.Component));
+}(_react2.Component)) || _class));
 
 exports.default = NoticeComtent;

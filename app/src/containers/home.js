@@ -37,8 +37,7 @@ function mapStateToProps(state) {
   return {
     items: state.home.items,
     navs: state.home.navs,
-    notice: state.notice,
-    books: state.books
+    newNotice: state.home.newNotice
   }
 }
 
@@ -65,17 +64,31 @@ export default class Home extends Component {
 
   render() {
     let navs = this.props.navs
+    let newNotice =  this.props.newNotice
+    var newBooks = [
+      {
+        title: 'javaScript权威指南',
+        time: '2017-01-25',
+        content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。'
+      }
+    ]
+    
     let notice = {
       text: '最新公告',
       icon: 'notice-icon',
-      title: 'notice-text'
+      title: 'notice-text',
+      newList: newNotice
     }
 
     let book = {
       text: '图书信息',
       icon: 'book-icon',
-      title: 'book-text'
+      title: 'book-text',
+      newList: newBooks
     }
+
+    
+    console.log('最新公告数据 newNotice', this.props)
     
       return (
         <div className='container'>

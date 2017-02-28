@@ -124,6 +124,7 @@ exports.default = {
   getNavs: function getNavs(token) {
     return _axios2.default.get(LOAD_NAVS_URL + '/' + token);
   },
+
   uploadUserInfo: function uploadUserInfo(data) {
     return _axios2.default.post(UPLOAD_USERINFO_URL, data);
   }

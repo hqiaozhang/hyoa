@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.loadNoticeList = undefined;
+exports.loadNoticeDetails = exports.loadNoticeList = undefined;
 
 var _actionType = require('../constants/actionType');
 
@@ -26,5 +26,18 @@ var loadNoticeList = exports.loadNoticeList = function loadNoticeList() {
   return {
     type: actionType.NOTICE_LIST,
     promise: _notice2.default.getNoticeList()
+  };
+};
+
+/**
+ * 加载所有公司公告详情内容
+ * 
+ * @returns action
+ */
+
+var loadNoticeDetails = exports.loadNoticeDetails = function loadNoticeDetails() {
+  return {
+    type: actionType.NOTICE_DETAILS,
+    promise: _notice2.default.getNoticeDetails()
   };
 };

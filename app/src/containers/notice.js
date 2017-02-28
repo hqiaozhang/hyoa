@@ -26,7 +26,6 @@ function mapDispatchToProps(dispatch) {
 export default class Notice extends Component {
   componentDidMount() {
     const { loadNoticeList } = this.props.actions
-
     loadNoticeList()
   }
 

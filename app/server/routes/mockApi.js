@@ -145,43 +145,72 @@ var mockData = {
 
 export const noticeList = [
   {
-    title: '关于春节放假的通知',
+    title: '关于春节放假的通知1',
+    time: '2017-01-23',
+    content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如公司决定调整放假具体如',
+    id: 1
+  },{
+    title: '重庆团建活动通知2',
+    time: '2017-01-23',
+    content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。',
+    id: 2
+  },{
+    title: '关于春节放假的通知3',
     time: '2017-01-23',
     content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如',
-    id: '001'
+    id: 3
   },{
-    title: '关于春节放假的通知',
+    title: '重庆团建活动通知4',
     time: '2017-01-23',
+    content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。',
+    id: 4
+  },{
+    title: '关于春节放假的通知5',
+    time: '2017-01-24',
     content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如',
-    id: '002'
+    id: 5
   },{
-    title: '关于春节放假的通知',
-    time: '2017-01-23',
-    content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如',
-    id: '003'
-  },{
-    title: '关于春节放假的通知',
-    time: '2017-01-23',
-    content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如',
-    id: '004'
-  },{
-    title: '关于春节放假的通知',
-    time: '2017-01-23',
-    content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如'
-  },{
-    title: '关于春节放假的通知',
-    time: '2017-01-23',
-    content: '为方便小伙伴们更好的安排春节假期人，公司决定调整放假具体如'
+    title: '重庆团建活动通知6',
+    time: '2017-01-25',
+    content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。'
   }
 ]
+
+//公告详情
+//export const noticeDetails = [noticeList[0]]
 
 //最新公告
-export const newNotice = [
-  {
-    title: '1'
+export function newNotice() {
+  let arry = []
+  for(let i = 0; i<5; i++){
+    arry.push(noticeList[i])
   }
-]
+  return arry
+}
 
+
+//公告详情
+export function getNoticeDetails (id){
+  console.log('公告id', id)
+
+  let obj =  noticeList.find( item => item.id == 5)
+
+/*  let obj = {
+    title: '重庆团建活动通知3',
+    time: '2017-01-25',
+    content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。',
+    id: 6
+  }
+  for (let i = 0, len = noticeList.length; i < len; i++) {
+    let item = noticeList[i]
+    if(item.id == id){
+      obj = item
+    }
+  }*/
+
+
+  return obj
+}
 
 
 

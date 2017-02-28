@@ -13,3 +13,15 @@ export const loadNoticeList = () => {
   }
 }
 
+/**
+ * 加载所有公司公告详情内容
+ * 
+ * @returns action
+ */
+
+export const loadNoticeDetails = () => {
+  return {
+    type: actionType.NOTICE_DETAILS,
+    promise: api.getNoticeDetails()
+  }
+}

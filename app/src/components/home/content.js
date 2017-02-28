@@ -13,26 +13,8 @@ export default class Content extends Component {
     }
 
     render() {
-        var lists = [
-
-              {
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-              },{
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-              },{
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-              },{
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-              },{
-                title: '团建活动通知：下午2点开始',
-                time: '2017-01-07'
-              }
-
-        ]
+        let newList = this.props.data.newList
+   
         return (
             <div className='content-block'>
                 <div className='header'>
@@ -41,7 +23,7 @@ export default class Content extends Component {
                     <span className='more'>更多>></span>
                 </div>
                 <div className='new-list'>
-                    <NewestList  lists={lists} />
+                    <NewestList  lists={newList} />
                 </div>
             </div>
         )

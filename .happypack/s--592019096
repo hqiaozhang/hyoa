@@ -45,7 +45,7 @@ exports.default = {
    * @returns promise对象，调用then方法后，获取查询到的数据
    */
   getNoticeDetails: function getNoticeDetails(id) {
-    return _axios2.default.get(NOTICE_DETAILS_URL, id);
+    return _axios2.default.get(NOTICE_LIST_URL + '/' + id);
   }
 
 };

@@ -1,0 +1,71 @@
+/*流程管理 css*/
+
+.process-main{
+  width: 975px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  height: 740px;
+
+  
+}
+ .process-main h4{
+  line-height: 32px;
+  font-size: 18px;
+  font-weight: normal;
+ }
+ .process-main h4 i{
+  color: #96161a;
+  font-size: 22px;
+  padding-right: 10px;
+
+ }
+ .query-criteria{
+  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
+  float: left;
+ }
+ .query-criteria li{
+  float: left;
+  margin-right: 40px;
+ }
+.query-criteria select{
+  border:1px solid #ccc;
+  font-family: '微软雅黑';
+  font-size: 16px;
+  border-radius: 3px;
+  height: 32px;
+  margin-left: 8px;
+  padding-right: 10px;
+  outline: none;
+  color: #555;
+}
+.query-content-list{
+  margin-top: 20px;
+  float: left;
+  width: 100%;
+  line-height: 32px;
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}
+.query-content-list table{
+  border:1px solid #eee;
+ /* float: left;*/
+}
+.query-content-list tr{
+  float: left;
+  width: 100%;
+}
+.query-content-list thead{
+  
+  background: #ecf8ff;
+  font-weight: normal;
+  
+}
+
+
+.clear{
+  clear: both;
+}

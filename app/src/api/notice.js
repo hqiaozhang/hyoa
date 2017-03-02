@@ -29,7 +29,7 @@ export default {
    * @returns promise对象，调用then方法后，获取查询到的数据
    */
   getNoticeDetails: function(id){
-    return axios.get(NOTICE_DETAILS_URL, id)
+    return axios.get(NOTICE_LIST_URL + '/' + id)
   }
 
 }

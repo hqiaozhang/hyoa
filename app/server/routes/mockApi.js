@@ -172,12 +172,11 @@ export const noticeList = [
   },{
     title: '重庆团建活动通知6',
     time: '2017-01-25',
-    content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。'
+    content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。',
+    id: 6
   }
 ]
 
-//公告详情
-//export const noticeDetails = [noticeList[0]]
 
 //最新公告
 export function newNotice() {
@@ -193,21 +192,7 @@ export function newNotice() {
 export function getNoticeDetails (id){
   console.log('公告id', id)
 
-  let obj =  noticeList.find( item => item.id == 5)
-
-/*  let obj = {
-    title: '重庆团建活动通知3',
-    time: '2017-01-25',
-    content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。',
-    id: 6
-  }
-  for (let i = 0, len = noticeList.length; i < len; i++) {
-    let item = noticeList[i]
-    if(item.id == id){
-      obj = item
-    }
-  }*/
-
+  let obj =  noticeList.find( item => item.id == id)
 
   return obj
 }
@@ -271,12 +256,12 @@ export function navs() {
         {
           key: 'faqi',
           value: '发起流程',
-          url: '/index/list'
+          url: '/index/procedure/send'
         },
         {
           key: 'wode',
-          value: '我的流程',
-          url: '/index/list'
+          value: '流程管理',
+          url: '/index/procedure/manage'
         }
       ]
     },

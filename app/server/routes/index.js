@@ -112,12 +112,12 @@ export default function(io) {
   })
 
   //公告列表
-  router.get('/api/noticeList', (req, res)=> {
+  router.get('/api/notice', (req, res)=> {
     res.send(noticeList);
   })
 
   //公告详情
-  router.get('/api/noticeDetails', (req, res)=> {
+  router.get('/api/notice/:id', (req, res)=> {
     res.send(getNoticeDetails(req.params.id));
   })
 

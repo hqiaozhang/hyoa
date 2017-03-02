@@ -12,6 +12,8 @@ import NewDetail from 'src/containers/newDetail'
 import Notice from 'src/containers/notice'  //公告列表
 import NoticeComtent from 'src/containers/noticeContent' //公告内容
 import SendNotice from 'src/containers/sendNotice' //发布公告
+import SendProcedure from 'src/containers/SendProcedure' //发起流程
+import Procedure from 'src/containers/procedure' //流程管理
 
 
 /**
@@ -32,8 +34,9 @@ export default function(history) {
           <Route path="notice" component={Notice} />
           <Route path="sendnotice" component={SendNotice} />
           <Route path="notice/:id" component={NoticeComtent} />
-          <Route path="list" component={NewsList} />
-          <Route path="list/:id" component={NewDetail} />
+          <Route path="procedure/send" component={SendProcedure} />
+          <Route path="procedure/manage" component={Procedure} />
+          
           
         </Route>
         <IndexRoute component={Login} onEnter={redirectToBack} />

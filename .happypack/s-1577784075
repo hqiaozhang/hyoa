@@ -35,9 +35,9 @@ var loadNoticeList = exports.loadNoticeList = function loadNoticeList() {
  * @returns action
  */
 
-var loadNoticeDetails = exports.loadNoticeDetails = function loadNoticeDetails() {
+var loadNoticeDetails = exports.loadNoticeDetails = function loadNoticeDetails(id) {
   return {
     type: actionType.NOTICE_DETAILS,
-    promise: _notice2.default.getNoticeDetails()
+    promise: _notice2.default.getNoticeDetails(id)
   };
 };

@@ -19,9 +19,9 @@ export const loadNoticeList = () => {
  * @returns action
  */
 
-export const loadNoticeDetails = () => {
+export const loadNoticeDetails = (id) => {
   return {
     type: actionType.NOTICE_DETAILS,
-    promise: api.getNoticeDetails()
+    promise: api.getNoticeDetails(id)
   }
 }

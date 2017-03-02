@@ -1,0 +1,35 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _actionType.LOAD_TODO_SUCCESS:
+      return (0, _objectAssign2.default)({}, state, { todoList: action.response });
+    default:
+      return state;
+  }
+};
+
+var _actionType = require('../constants/actionType');
+
+var _objectAssign = require('object-assign');
+
+var _objectAssign2 = _interopRequireDefault(_objectAssign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ *  @Author    zhanghq
+ *  @DateTime  2017-03-02
+ *  @describe  [流程管理]
+ */
+
+var initialState = {
+  todoList: []
+};

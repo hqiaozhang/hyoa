@@ -22,13 +22,13 @@ var _index6 = _interopRequireDefault(_index5);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _sendContent = require('../components/notice/sendContent');
-
-var _sendContent2 = _interopRequireDefault(_sendContent);
-
 var _titleCategory = require('../components/notice/titleCategory');
 
 var _titleCategory2 = _interopRequireDefault(_titleCategory);
+
+var _sendContent = require('../components/procedure/sendContent');
+
+var _sendContent2 = _interopRequireDefault(_sendContent);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -82,7 +82,7 @@ var SendProcedure = _wrapComponent('SendProcedure')(function (_Component) {
     value: function render() {
       return _react3.default.createElement(
         'div',
-        { className: 'send-notice' },
+        { className: 'send-notice send-procedure' },
         _react3.default.createElement(_titleCategory2.default, { title: '\u53D1\u8D77\u65B0\u6D41\u7A0B', className: 'iconfont notice-icon' }),
         _react3.default.createElement(_sendContent2.default, null)
       );

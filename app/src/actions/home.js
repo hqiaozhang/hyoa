@@ -27,6 +27,19 @@ export const loadNewNotice = () => {
   }
 }
 
+
+/**
+ * 加载最新图书
+ * 
+ * @returns action
+ */
+export const loadNewBooks = () => {
+  return {
+    type: actionType.NEW_BOOKS,
+    promise: api.getNewBooks()
+  }
+}
+
 /**
  * 加载公告详情
  * 详细描述：

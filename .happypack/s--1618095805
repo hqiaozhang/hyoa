@@ -114,11 +114,12 @@ function mapStateToProps(state) {
   return {
     items: state.home.items,
     navs: state.home.navs,
-    newNotice: state.home.newNotice
+    newNotice: state.home.newNotice,
+    newBooks: state.home.newBooks
   };
 }
 
-var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToProps, { loadNavs: _home.loadNavs, logout: _user.logout, uploadUserInfo: _home.uploadUserInfo, loadNewNotice: _home.loadNewNotice }), _dec(_class = function (_Component) {
+var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToProps, { loadNavs: _home.loadNavs, logout: _user.logout, uploadUserInfo: _home.uploadUserInfo, loadNewNotice: _home.loadNewNotice, loadNewsDetail: _home.loadNewsDetail, loadNewBooks: _home.loadNewBooks }), _dec(_class = function (_Component) {
   _inherits(Home, _Component);
 
   function Home(props) {
@@ -134,8 +135,12 @@ var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToPro
   _createClass(Home, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
+      var id = this.props.params.id;
+
       this.props.loadNavs();
       this.props.loadNewNotice();
+      this.props.loadNewsDetail(id);
+      this.props.loadNewBooks();
     }
   }, {
     key: 'uploadFile',
@@ -151,11 +156,7 @@ var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToPro
     value: function render() {
       var navs = this.props.navs;
       var newNotice = this.props.newNotice;
-      var newBooks = [{
-        title: 'javaScript权威指南',
-        time: '2017-01-25',
-        content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。'
-      }];
+      var newBooks = this.props.newBooks;
 
       var notice = {
         text: '最新公告',
@@ -170,8 +171,6 @@ var Home = _wrapComponent('Home')((_dec = (0, _reactRedux.connect)(mapStateToPro
         title: 'book-text',
         newList: newBooks
       };
-
-      console.log('最新公告数据 newNotice', this.props);
 
       return _react3.default.createElement(
         'div',

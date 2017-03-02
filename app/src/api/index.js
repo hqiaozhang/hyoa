@@ -9,7 +9,8 @@ const { LOGIN_URL, LOAD_USER_URL,
   LOAD_NEWS_DETAIL_URL,
   LOAD_NAVS_URL,
   UPLOAD_USERINFO_URL,
-  NEW_NOTICE_URL } = reqURL
+  NEW_NOTICE_URL,
+  NEW_BOOKS_URL } = reqURL
 
 //axios.defaults.baseURL = API_BASE_URL
 axios.defaults.withCredentials = true
@@ -96,6 +97,17 @@ export default {
     return axios.get(LOAD_NEWS_DETAIL_URL + '/' + id)
   },
 
+  /**
+   * 查询最新图书，暂时不分页zhq
+   * @param {}
+   * @returns promise对象，调用then方法后，获取查询到的数据
+   */
+  getNewBooks: function(data){
+    return axios.get(NEW_BOOKS_URL, data)
+  },
+
+
+  
   /**
    * 根据当前登录用户信息，获取用户OA系统首页导航列表
    * @param {string} token 登录用户标识

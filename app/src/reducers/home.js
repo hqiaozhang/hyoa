@@ -1,7 +1,11 @@
 
 import { LOAD_NEW_LIST_SUCCESS,
   NEWS_DETAIL_FAILURE,
-  NEWS_DETAIL_SUCCESS, LOAD_NAVS_SUCCESS, NOTICE_LIST, NEW_NOTICE_SUCCESS } from '../constants/actionType'
+  NEWS_DETAIL_SUCCESS, 
+  LOAD_NAVS_SUCCESS, 
+  NOTICE_LIST, 
+  NEW_NOTICE_SUCCESS,
+  NEW_BOOKS_SUCCESS } from '../constants/actionType'
 import assign from 'object-assign'
 
 let initialState = {
@@ -9,7 +13,8 @@ let initialState = {
   items: [],
   newsDetail: {},
   navs: [],
-  newNotice: []
+  newNotice: [],
+  newBooks: []
 }
 
 export default function (state = initialState, action) {
@@ -26,6 +31,8 @@ export default function (state = initialState, action) {
       return assign({}, state, {navs: action.response})
     case NEW_NOTICE_SUCCESS:
       return assign({}, state, {newNotice: action.response})
+    case NEW_BOOKS_SUCCESS:
+      return assign({}, state, {newBooks: action.response})  
     default:
       return state
   }

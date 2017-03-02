@@ -22,6 +22,8 @@ var _index6 = _interopRequireDefault(_index5);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _reactRouter = require('react-router');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -77,14 +79,19 @@ var NewestList = _wrapComponent('NewestList')(function (_Component) {
         'ul',
         { className: 'content' },
         lists.map(function (data, index) {
+          var id = data.id;
           return _react3.default.createElement(
-            'li',
-            { key: index },
-            data.title,
+            _reactRouter.Link,
+            { to: '/index/notice/' + id, key: index },
             _react3.default.createElement(
-              'span',
+              'li',
               null,
-              data.time
+              data.title,
+              _react3.default.createElement(
+                'span',
+                null,
+                data.time
+              )
             )
           );
         })

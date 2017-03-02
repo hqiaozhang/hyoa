@@ -76,11 +76,34 @@ var ProcedureComponent = _wrapComponent('ProcedureComponent')(function (_Compone
     key: 'render',
     value: function render() {
 
+      var datas = [{
+        type: '请假',
+        startTime: '2017-1-5 9:30',
+        endTime: '2017-1-5 9:30',
+        reason: '外出办公',
+        approval: '刘成',
+        state: '待审批'
+      }, {
+        type: '调休',
+        startTime: '2017-1-5 9:30',
+        endTime: '2017-1-5 9:30',
+        reason: '外出办公',
+        approval: '刘成',
+        state: '待审批'
+      }, {
+        type: '请假',
+        startTime: '2017-1-5 9:30',
+        endTime: '2017-1-5 9:30',
+        reason: '外出办公',
+        approval: '刘成',
+        state: '待审批'
+      }];
+
       return _react3.default.createElement(
         'div',
         { className: 'process-main' },
         _react3.default.createElement(
-          'h4',
+          'h5',
           null,
           _react3.default.createElement(
             'i',
@@ -146,7 +169,7 @@ var ProcedureComponent = _wrapComponent('ProcedureComponent')(function (_Compone
           { className: 'query-content-list' },
           _react3.default.createElement(
             'table',
-            { width: '100%', border: '0', cellspacing: '0', cellpadding: '0' },
+            { width: '100%' },
             _react3.default.createElement(
               'thead',
               null,
@@ -198,50 +221,66 @@ var ProcedureComponent = _wrapComponent('ProcedureComponent')(function (_Compone
             _react3.default.createElement(
               'tbody',
               null,
-              _react3.default.createElement(
-                'tr',
-                null,
-                _react3.default.createElement(
-                  'td',
-                  null,
-                  '1'
-                ),
-                _react3.default.createElement(
-                  'td',
-                  null,
-                  '\u8BF7\u5047'
-                ),
-                _react3.default.createElement(
-                  'td',
-                  null,
-                  '2017-1-5 9:30'
-                ),
-                _react3.default.createElement(
-                  'td',
-                  null,
-                  '2017-1-5 9:30'
-                ),
-                _react3.default.createElement(
-                  'td',
-                  null,
-                  '\u5916\u51FA\u529E\u516C'
-                ),
-                _react3.default.createElement(
-                  'td',
-                  null,
-                  '\u5218\u6210'
-                ),
-                _react3.default.createElement(
-                  'td',
-                  null,
-                  '\u5F85\u5BA1\u6279'
-                ),
-                _react3.default.createElement(
-                  'td',
-                  null,
-                  '\u4FEE\u6539'
-                )
-              )
+              datas.map(function (d, index) {
+                return _react3.default.createElement(
+                  'tr',
+                  { key: index },
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    index + 1
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.type
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.startTime
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.endTime
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.reason
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.approval
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.state
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    { className: 'operation' },
+                    _react3.default.createElement(
+                      'span',
+                      null,
+                      '\u64CD\u4F5C'
+                    ),
+                    _react3.default.createElement(
+                      'span',
+                      null,
+                      '\u67E5\u770B'
+                    ),
+                    _react3.default.createElement(
+                      'span',
+                      null,
+                      '\u4FEE\u6539'
+                    )
+                  )
+                );
+              })
             )
           )
         )

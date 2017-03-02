@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.uploadUserInfo = exports.loadNavs = exports.loadNewsDetail1 = exports.loadNewsDetail = exports.loadNewNotice = exports.loadNewsList = undefined;
+exports.uploadUserInfo = exports.loadNavs = exports.loadNewsDetail1 = exports.loadNewsDetail = exports.loadNewBooks = exports.loadNewNotice = exports.loadNewsList = undefined;
 
 var _actionType = require('../constants/actionType');
 
@@ -40,6 +40,18 @@ var loadNewNotice = exports.loadNewNotice = function loadNewNotice() {
   return {
     type: actionType.NEW_NOTICE,
     promise: _api2.default.getNewNotice()
+  };
+};
+
+/**
+ * 加载最新图书
+ * 
+ * @returns action
+ */
+var loadNewBooks = exports.loadNewBooks = function loadNewBooks() {
+  return {
+    type: actionType.NEW_BOOKS,
+    promise: _api2.default.getNewBooks()
   };
 };
 

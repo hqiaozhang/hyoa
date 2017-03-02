@@ -1,0 +1,194 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = require('E:\\workSpaces\\hyoa\\node_modules\\redbox-react\\lib\\index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require('E:\\workSpaces\\hyoa\\node_modules\\react-transform-catch-errors\\lib\\index.js');
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index5 = require('E:\\workSpaces\\hyoa\\node_modules\\react-transform-hmr\\lib\\index.js');
+
+var _index6 = _interopRequireDefault(_index5);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  TodoList: {
+    displayName: 'TodoList'
+  }
+};
+
+var _EWorkSpacesHyoaNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+  filename: 'E:/workSpaces/hyoa/app/src/components/procedure/todoList.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+var _EWorkSpacesHyoaNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+  filename: 'E:/workSpaces/hyoa/app/src/components/procedure/todoList.js',
+  components: _components,
+  locals: [],
+  imports: [_react3.default, _index2.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _EWorkSpacesHyoaNode_modulesReactTransformHmrLibIndexJs2(_EWorkSpacesHyoaNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+  };
+} /**
+   *  @Author    zhanghq
+   *  @DateTime  2017-02-26
+   *  @describe  [待办事项]
+   */
+
+var TodoList = _wrapComponent('TodoList')(function (_Component) {
+  _inherits(TodoList, _Component);
+
+  function TodoList() {
+    _classCallCheck(this, TodoList);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(TodoList).apply(this, arguments));
+  }
+
+  _createClass(TodoList, [{
+    key: 'render',
+    value: function render() {
+      var data = this.props.data;
+      return _react3.default.createElement(
+        'div',
+        { className: 'todo-main' },
+        _react3.default.createElement(
+          'div',
+          { className: 'top-title' },
+          '\u5F85\u529E\u4E8B\u9879'
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'todo-context' },
+          data.map(function (d, i) {
+            var type = d.type;
+            var style = '';
+            var iconTxt = '';
+            var typeTxt = '';
+
+            switch (type) {
+              case 1:
+                style = 'over-time';
+                iconTxt = '加';
+                typeTxt = '加班申请';
+                break;
+              case 2:
+                style = 'leave';
+                iconTxt = '假';
+                typeTxt = '请假申请';
+                break;
+              case 3:
+                style = 'formal';
+                iconTxt = '正';
+                typeTxt = '转正申请';
+                break;
+              case 4:
+                style = 'dispatch ';
+                iconTxt = '差';
+                typeTxt = '出差申请';
+                break;
+
+            }
+            return _react3.default.createElement(
+              'div',
+              { className: 'todo-list', key: i },
+              _react3.default.createElement(
+                'div',
+                { className: 'row' },
+                _react3.default.createElement(
+                  'i',
+                  { className: 'icon ' + style },
+                  iconTxt
+                ),
+                _react3.default.createElement(
+                  'div',
+                  { className: 'details' },
+                  _react3.default.createElement(
+                    'h5',
+                    null,
+                    typeTxt
+                  ),
+                  _react3.default.createElement(
+                    'p',
+                    null,
+                    d.details
+                  )
+                ),
+                _react3.default.createElement(
+                  'div',
+                  { className: 'edit' },
+                  _react3.default.createElement(
+                    'i',
+                    { className: 'iconfont edit-icon' },
+                    '\uE607'
+                  ),
+                  '\u5BA1\u6279'
+                )
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'row' },
+                _react3.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react3.default.createElement(
+                    'p',
+                    null,
+                    '\u5F53\u524D\u6B65\u9AA4'
+                  ),
+                  _react3.default.createElement(
+                    'p',
+                    { className: 'cur-step' },
+                    d.curStep
+                  )
+                ),
+                _react3.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react3.default.createElement(
+                    'p',
+                    null,
+                    '\u8FDB\u5C55\u72B6\u6001'
+                  ),
+                  _react3.default.createElement(
+                    'p',
+                    { className: 'cur-state' },
+                    d.curState
+                  )
+                )
+              )
+            );
+          })
+        )
+      );
+    }
+  }]);
+
+  return TodoList;
+}(_react2.Component));
+
+exports.default = TodoList;

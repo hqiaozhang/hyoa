@@ -15,11 +15,11 @@ export default class SendContent extends Component{
           <tbody>
             <tr>
               <td>标题：</td>
-              <td><input type='text' className='title' /></td>
+              <td><input type='text' className='add-title' /></td>
             </tr>
             <tr>
               <td>标签：</td>
-              <td><input type='text' className='label' /></td>
+              <td><input type='text' className='add-title label' /></td>
             </tr>
             <tr>
               <td>正文：</td>

@@ -92,7 +92,7 @@ var SendContent = _wrapComponent('SendContent')(function (_Component) {
               _react3.default.createElement(
                 'td',
                 null,
-                _react3.default.createElement('input', { type: 'text', className: 'title' })
+                _react3.default.createElement('input', { type: 'text', className: 'add-title' })
               )
             ),
             _react3.default.createElement(
@@ -106,7 +106,7 @@ var SendContent = _wrapComponent('SendContent')(function (_Component) {
               _react3.default.createElement(
                 'td',
                 null,
-                _react3.default.createElement('input', { type: 'text', className: 'label' })
+                _react3.default.createElement('input', { type: 'text', className: 'add-title label' })
               )
             ),
             _react3.default.createElement(

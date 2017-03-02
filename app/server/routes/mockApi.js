@@ -1,8 +1,5 @@
 let _ = require('lodash')
 
-
-
-
 var mockData = {
   album_offset: 0,
   albums: [
@@ -177,6 +174,59 @@ export const noticeList = [
   }
 ]
 
+const bookList = [
+  {
+    title: 'javaScript权威指南',
+    time: '2017-01-25',
+    content: '',
+    id: 1
+  },{
+    title: 'HTML5&CSS3权威指南',
+    time: '2017-01-24',
+    content: '',
+    id: 2
+  },{
+    title: '人月神话(40周年纪念版)',
+    time: '2017-01-24',
+    content: '',
+    id: 3
+  },{
+    title: 'React框架技术详解',
+    time: '2017-01-24',
+    content: '',
+    id: 4
+  },{
+    title: 'D3.js',
+    time: '2017-01-24',
+    content: '',
+    id: 5
+  }
+]
+
+//待办事项
+export const todoList = [
+  {
+    type: 1,
+    details: '张红桥 2017年1月10日申请加班',
+    curStep: '部门审核',
+    curState: '未完成'
+  },{
+    type: 2,
+    details: '张红桥 2017年1月10日申请调休',
+    curStep: '部门审核',
+    curState: '未完成'
+  },{
+    type: 3,
+    details: '张红桥 2017年2月10日申请加班',
+    curStep: '部门审核',
+    curState: '未完成'
+  },{
+    type: 4,
+    details: '张红桥 2017年1月10日申请加班',
+    curStep: '部门审核',
+    curState: '未完成'
+  }
+]
 
 //最新公告
 export function newNotice() {
@@ -187,13 +237,19 @@ export function newNotice() {
   return arry
 }
 
+//最新图书
+export function newBooks(){
+  let arry = []
+  for(let i = 0; i<5; i++){
+    arry.push(bookList[i])
+  }
+  return arry
+}
+
 
 //公告详情
 export function getNoticeDetails (id){
-  console.log('公告id', id)
-
   let obj =  noticeList.find( item => item.id == id)
-
   return obj
 }
 
@@ -233,7 +289,8 @@ export function navs() {
     {
       key: '1',
       value: '首页',
-      iconName: 'home'
+      iconName: 'home',
+      url: '/index'
     },
     {
       key: '2',
@@ -262,6 +319,16 @@ export function navs() {
           key: 'wode',
           value: '流程管理',
           url: '/index/procedure/manage'
+        },
+        {
+          key: 'daiban',
+          value: '待办事项',
+          url: '/index/procedure/todo'
+        },
+        {
+          key: 'banjie',
+          value: '办结事项',
+          url: '/index/procedure/matters'
         }
       ]
     },

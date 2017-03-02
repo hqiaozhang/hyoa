@@ -96,7 +96,7 @@ var NoticeList = _wrapComponent('NoticeList')(function (_Component) {
               _react3.default.createElement(
                 'li',
                 { style: style },
-                index < 3 ? _react3.default.createElement('div', { className: 'new-icon' }) : '',
+                index < 3 ? _react3.default.createElement('i', { className: 'new-icon' }) : '',
                 _react3.default.createElement(
                   'h4',
                   null,

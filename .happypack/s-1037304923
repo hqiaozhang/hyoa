@@ -1,0 +1,39 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _axios = require('axios');
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _config = require('../../../config');
+
+var _config2 = _interopRequireDefault(_config);
+
+var _requestURL = require('../constants/requestURL');
+
+var _requestURL2 = _interopRequireDefault(_requestURL);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+require('es6-promise').polyfill();
+var LOAD_TODO_URL = _requestURL2.default.LOAD_TODO_URL;
+
+/**
+ * 使用axios调用后台接口，所有请求的方法暂时都放这里
+ * @autor zhanghq
+ */
+
+exports.default = {
+  /**
+  * 查询所有待办事项，暂时不分页
+  * @param {}
+  * @returns promise对象，调用then方法后，获取查询到的数据
+  */
+  getTodoList: function getTodoList(data) {
+    return _axios2.default.get(LOAD_TODO_URL, data);
+  }
+
+};

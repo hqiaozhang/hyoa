@@ -14,6 +14,8 @@ import NoticeComtent from 'src/containers/noticeContent' //公告内容
 import SendNotice from 'src/containers/sendNotice' //发布公告
 import SendProcedure from 'src/containers/SendProcedure' //发起流程
 import Procedure from 'src/containers/procedure' //流程管理
+import ToDo from 'src/containers/todo' //待办事项
+import MakingMatters from 'src/containers/makingMatters' //办结事项
 
 
 /**
@@ -36,8 +38,8 @@ export default function(history) {
           <Route path="notice/:id" component={NoticeComtent} />
           <Route path="procedure/send" component={SendProcedure} />
           <Route path="procedure/manage" component={Procedure} />
-          
-          
+          <Route path="procedure/todo" component={ToDo} />
+          <Route path="procedure/matters" component={MakingMatters} />
         </Route>
         <IndexRoute component={Login} onEnter={redirectToBack} />
       </Route>

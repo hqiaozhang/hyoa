@@ -29,6 +29,7 @@ var LOAD_NEWS_DETAIL_URL = _requestURL2.default.LOAD_NEWS_DETAIL_URL;
 var LOAD_NAVS_URL = _requestURL2.default.LOAD_NAVS_URL;
 var UPLOAD_USERINFO_URL = _requestURL2.default.UPLOAD_USERINFO_URL;
 var NEW_NOTICE_URL = _requestURL2.default.NEW_NOTICE_URL;
+var NEW_BOOKS_URL = _requestURL2.default.NEW_BOOKS_URL;
 
 //axios.defaults.baseURL = API_BASE_URL
 
@@ -114,6 +115,15 @@ exports.default = {
    */
   getNewsDetail: function getNewsDetail(id) {
     return _axios2.default.get(LOAD_NEWS_DETAIL_URL + '/' + id);
+  },
+
+  /**
+   * 查询最新图书，暂时不分页zhq
+   * @param {}
+   * @returns promise对象，调用then方法后，获取查询到的数据
+   */
+  getNewBooks: function getNewBooks(data) {
+    return _axios2.default.get(NEW_BOOKS_URL, data);
   },
 
   /**

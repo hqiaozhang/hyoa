@@ -49,7 +49,7 @@ export default class Nav extends Component {
     render() {
         //console.log(this.state)
         let navs = this.props.navs
-        let len = this.state.currentSubItems.children ? 55 + this.state.currentSubItems.children.length * 27 : 55
+        let len = this.state.currentSubItems.children ? 55 + this.state.currentSubItems.children.length * 42 : 55
         return (
             <div className='navs'>
                 <div className='logo-title'>

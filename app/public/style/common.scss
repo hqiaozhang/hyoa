@@ -21,6 +21,8 @@ i {
   margin: 0;
   padding: 0;
   border:none;
+  font-family: '微软雅黑';
+
 
 }
 em {
@@ -36,7 +38,9 @@ a {
   text-decoration: none;
   color:#fff;
 }
-
+table{
+  border-collapse: collapse;
+}
 
 /*使用字体图标*/
 /*第一步：拷贝项目下面生成的font-face*/
@@ -63,3 +67,66 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*发布内容共公样式*/
+
+.send-content .add-title{
+  width: 300px;
+}
+.send-content{
+  font-size: 16px;
+  color: #666;
+  float: left;
+}
+.send-content table{
+  width: 800px;
+}
+.send-content tr{
+  line-height: 34px;
+  margin-bottom: 25px;
+  float: left;
+  width: 100%;
+
+}
+.send-content input[type='text'], textarea, select{
+  border:1px solid #e4e5e5;
+  background: #f4f5f9;
+  border-radius: 5px;
+  line-height: 36px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+  color: #666;
+  font-family: '微软雅黑'
+}
+.send-content textarea{
+  width: 300px;
+}
+.send-content select{
+  line-height: 36px;
+  height: 36px;
+  width: 210px;
+  
+}
+.send-content input[type='text']{
+  height: 36px;
+}
+.send-content textarea{
+  width: 700px;
+}
+.send-content input[type='button']{
+  float: right;
+  padding: 8px 30px;
+  border-radius: 5px;
+  margin-right: 35px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+.time-frame input{
+  width: 140px;
+}
+
+
+.clear{
+  clear: both;
+}

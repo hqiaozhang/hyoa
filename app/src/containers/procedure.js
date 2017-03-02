@@ -7,7 +7,7 @@
 
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import * as actionCreators from '../actions/notice'
+
 import { bindActionCreators } from 'redux'
 
 import ProcedureComponent from '../components/procedure/procedure'

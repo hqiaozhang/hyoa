@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import Dropzone from 'react-dropzone'
-import { loadNavs, uploadUserInfo, loadNewNotice } from '../actions/home'
+import { loadNavs, uploadUserInfo, loadNewNotice, loadNewsDetail, loadNewBooks } from '../actions/home'
 import { localLogin, logout } from '../actions/user'
 import Navs from '../components/home/nav'
 import Header from '../components/home/header'
@@ -37,11 +37,12 @@ function mapStateToProps(state) {
   return {
     items: state.home.items,
     navs: state.home.navs,
-    newNotice: state.home.newNotice
+    newNotice: state.home.newNotice,
+    newBooks: state.home.newBooks
   }
 }
 
-@connect(mapStateToProps, { loadNavs, logout, uploadUserInfo, loadNewNotice })
+@connect(mapStateToProps, { loadNavs, logout, uploadUserInfo, loadNewNotice, loadNewsDetail, loadNewBooks })
 export default class Home extends Component {
   constructor(props) {
     super(props)
@@ -50,8 +51,11 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
+    let { id } = this.props.params
     this.props.loadNavs()
     this.props.loadNewNotice()
+    this.props.loadNewsDetail(id)
+    this.props.loadNewBooks()
   }
 
   uploadFile(acceptedFiles, rejectedFiles) {
@@ -65,13 +69,7 @@ export default class Home extends Component {
   render() {
     let navs = this.props.navs
     let newNotice =  this.props.newNotice
-    var newBooks = [
-      {
-        title: 'javaScript权威指南',
-        time: '2017-01-25',
-        content: '为迎接新年的到来，感谢大家一直以来对海云的付出，公司拟定于2017年.。。。'
-      }
-    ]
+    let newBooks = this.props.newBooks
     
     let notice = {
       text: '最新公告',
@@ -87,9 +85,6 @@ export default class Home extends Component {
       newList: newBooks
     }
 
-    
-    console.log('最新公告数据 newNotice', this.props)
-    
       return (
         <div className='container'>
           <div className='header-container'>

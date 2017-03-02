@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 export default class NewestList extends Component {
   render() {
@@ -13,7 +14,10 @@ export default class NewestList extends Component {
       <ul className='content'>
         {
           lists.map( (data, index) => {
-            return <li key={index}>{data.title}<span>{data.time}</span></li>
+            let id = data.id
+            return (
+              <Link to={`/index/notice/${id}`} key={index}><li>{data.title}<span>{data.time}</span></li></Link>
+            )
           })
         }
       </ul>

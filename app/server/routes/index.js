@@ -7,7 +7,16 @@ import formidable from 'formidable'
 import RestResult from '../RestResult'
 import { getEntity } from '../models/dbHandle'
 import { readExcelFile } from '../util'
-import { getChartData, items, getUser, getItem, navs, noticeList, newNotice, getNoticeDetails } from './mockApi'
+import { getChartData, 
+  items, 
+  getUser, 
+  getItem, 
+  navs, 
+  noticeList, 
+  newNotice, 
+  getNoticeDetails, 
+  newBooks,
+  todoList } from './mockApi'
 let router = express.Router()
 
 export default function(io) {
@@ -95,8 +104,13 @@ export default function(io) {
   })
 
   //最新公告
-  router.get('/api/newNotice', (req, res)=> {
+  router.get('/api/newnotice', (req, res)=> {
     res.send(newNotice());
+  })
+
+  //最新图书
+  router.get('/api/newbooks', (req, res)=> {
+    res.send(newBooks());
   })
 
   router.get('/api/navs/:id', (req, res)=> {
@@ -119,6 +133,11 @@ export default function(io) {
   //公告详情
   router.get('/api/notice/:id', (req, res)=> {
     res.send(getNoticeDetails(req.params.id));
+  })
+
+  //待办事项
+  router.get('/api/todolist', (req, res)=> {
+    res.send(todoList);
   })
 
   router.post('/api/uploaduserinfo', (req, res) => {

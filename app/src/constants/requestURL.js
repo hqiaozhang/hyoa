@@ -13,5 +13,7 @@ export default {
     UPLOAD_USERINFO_URL: '/api/uploaduserinfo',
     NEW_NOTICE_URL: '/api/newNotice',
     NOTICE_LIST_URL: '/api/notice',
-    NOTICE_DETAILS_URL: '/api/noticeDetails'
+    NOTICE_DETAILS_URL: '/api/noticedetails',
+    NEW_BOOKS_URL: '/api/newbooks',
+    LOAD_TODO_URL: '/api/todolist'
 }

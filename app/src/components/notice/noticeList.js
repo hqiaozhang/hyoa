@@ -23,7 +23,7 @@ export default class NoticeList extends Component {
               return (
                 <Link to={`/index/notice/${id}`} key={index}>
                   <li style={style}>  
-                    { index < 3 ? <div className="new-icon"></div> : '' }
+                    { index < 3 ? <i className="new-icon"></i> : '' }
                     <h4>{data.title}</h4>
                     <span className='time'>{data.time}</span>
                     <p>{data.content}</p>

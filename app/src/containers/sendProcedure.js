@@ -6,13 +6,13 @@
 
 import React, { Component } from 'react'
 
-import SendContent from '../components/notice/sendContent'
 import TitleCategory from '../components/notice/titleCategory'
+import SendContent  from '../components/procedure/sendContent'
 
 export default class SendProcedure extends Component{
   render(){
     return (
-      <div className='send-notice'>
+      <div className='send-notice send-procedure'>
         <TitleCategory title='发起新流程' className='iconfont notice-icon' />
         <SendContent />
       </div>

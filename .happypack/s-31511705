@@ -24,17 +24,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _reactRedux = require('react-redux');
 
-var _notice = require('../actions/notice');
-
-var actionCreators = _interopRequireWildcard(_notice);
-
 var _redux = require('redux');
 
 var _procedure = require('../components/procedure/procedure');
 
 var _procedure2 = _interopRequireDefault(_procedure);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

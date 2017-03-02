@@ -122,7 +122,7 @@ var Nav = _wrapComponent('Nav')(function (_Component) {
 
             //console.log(this.state)
             var navs = this.props.navs;
-            var len = this.state.currentSubItems.children ? 55 + this.state.currentSubItems.children.length * 27 : 55;
+            var len = this.state.currentSubItems.children ? 55 + this.state.currentSubItems.children.length * 42 : 55;
             return _react3.default.createElement(
                 'div',
                 { className: 'navs' },

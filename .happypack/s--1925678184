@@ -21,6 +21,8 @@ exports.default = function () {
       return (0, _objectAssign2.default)({}, state, { navs: action.response });
     case _actionType.NEW_NOTICE_SUCCESS:
       return (0, _objectAssign2.default)({}, state, { newNotice: action.response });
+    case _actionType.NEW_BOOKS_SUCCESS:
+      return (0, _objectAssign2.default)({}, state, { newBooks: action.response });
     default:
       return state;
   }
@@ -39,5 +41,6 @@ var initialState = {
   items: [],
   newsDetail: {},
   navs: [],
-  newNotice: []
+  newNotice: [],
+  newBooks: []
 };

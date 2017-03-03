@@ -16,6 +16,10 @@ import SendProcedure from 'src/containers/SendProcedure' //发起流程
 import Procedure from 'src/containers/procedure' //流程管理
 import ToDo from 'src/containers/todo' //待办事项
 import MakingMatters from 'src/containers/makingMatters' //办结事项
+import PersonInfo from 'src/containers/personInfo' //人员信息
+import SurplusRest from 'src/containers/surplusRest' //剩余调休
+
+
 
 
 /**
@@ -40,6 +44,8 @@ export default function(history) {
           <Route path="procedure/manage" component={Procedure} />
           <Route path="procedure/todo" component={ToDo} />
           <Route path="procedure/matters" component={MakingMatters} />
+          <Route path="info/person" component={PersonInfo} />
+          <Route path="info/rest" component={SurplusRest} />
         </Route>
         <IndexRoute component={Login} onEnter={redirectToBack} />
       </Route>

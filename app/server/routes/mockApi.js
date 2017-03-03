@@ -340,12 +340,12 @@ export function navs() {
         {
           key: 'person',
           value: '个人信息',
-          url: '/index/list'
+          url: '/index/info/person'
         },
         {
-          key: 'luancha',
-          value: '乱查看',
-          url: '/index/list'
+          key: 'rest',
+          value: '调休天数',
+          url: '/index/info/rest'
         }
       ]
     },

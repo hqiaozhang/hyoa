@@ -22,7 +22,9 @@ exports.default = function (history) {
         _react2.default.createElement(_reactRouter.Route, { path: 'procedure/send', component: _SendProcedure2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'procedure/manage', component: _procedure2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'procedure/todo', component: _todo2.default }),
-        _react2.default.createElement(_reactRouter.Route, { path: 'procedure/matters', component: _makingMatters2.default })
+        _react2.default.createElement(_reactRouter.Route, { path: 'procedure/matters', component: _makingMatters2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: 'info/person', component: _personInfo2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: 'info/rest', component: _surplusRest2.default })
       ),
       _react2.default.createElement(_reactRouter.IndexRoute, { component: _login2.default, onEnter: _authUtil.redirectToBack })
     )
@@ -90,5 +92,13 @@ var _todo2 = _interopRequireDefault(_todo);
 var _makingMatters = require('src/containers/makingMatters');
 
 var _makingMatters2 = _interopRequireDefault(_makingMatters);
+
+var _personInfo = require('src/containers/personInfo');
+
+var _personInfo2 = _interopRequireDefault(_personInfo);
+
+var _surplusRest = require('src/containers/surplusRest');
+
+var _surplusRest2 = _interopRequireDefault(_surplusRest);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

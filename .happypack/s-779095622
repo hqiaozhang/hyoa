@@ -1,0 +1,281 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = require('E:\\workSpaces\\hyoa\\node_modules\\redbox-react\\lib\\index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require('E:\\workSpaces\\hyoa\\node_modules\\react-transform-catch-errors\\lib\\index.js');
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index5 = require('E:\\workSpaces\\hyoa\\node_modules\\react-transform-hmr\\lib\\index.js');
+
+var _index6 = _interopRequireDefault(_index5);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  RestComponent: {
+    displayName: 'RestComponent'
+  }
+};
+
+var _EWorkSpacesHyoaNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+  filename: 'E:/workSpaces/hyoa/app/src/components/info/rest.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+var _EWorkSpacesHyoaNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+  filename: 'E:/workSpaces/hyoa/app/src/components/info/rest.js',
+  components: _components,
+  locals: [],
+  imports: [_react3.default, _index2.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _EWorkSpacesHyoaNode_modulesReactTransformHmrLibIndexJs2(_EWorkSpacesHyoaNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+  };
+} /**
+   *  @Author    zhanghq
+   *  @DateTime  2017-02-22
+   *  @describe  [流程管理]
+   */
+
+// 引入组件
+
+
+var RestComponent = _wrapComponent('RestComponent')(function (_Component) {
+  _inherits(RestComponent, _Component);
+
+  function RestComponent() {
+    _classCallCheck(this, RestComponent);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(RestComponent).apply(this, arguments));
+  }
+
+  _createClass(RestComponent, [{
+    key: 'render',
+    value: function render() {
+
+      var datas = [{
+        project: '浪潮',
+        type: '周末加班',
+        startTime: '2017-1-5 9:30',
+        endTime: '2017-1-5 9:30',
+        whenLong: 4,
+        jobContent: '开发页面',
+        state: '待审批'
+      }, {
+        project: '浪潮',
+        type: '周末加班',
+        startTime: '2017-1-5 9:30',
+        endTime: '2017-1-5 9:30',
+        whenLong: 4,
+        jobContent: '开发页面',
+        state: '待审批'
+      }, {
+        project: '浪潮',
+        type: '周末加班',
+        startTime: '2017-1-5 9:30',
+        endTime: '2017-1-5 9:30',
+        whenLong: 4,
+        jobContent: '开发页面',
+        state: '待审批'
+      }];
+
+      return _react3.default.createElement(
+        'div',
+        { className: 'process-main' },
+        _react3.default.createElement(
+          'h5',
+          null,
+          _react3.default.createElement(
+            'i',
+            { className: 'iconfont' },
+            '\uE63F'
+          ),
+          '\u5269\u4F59\u8C03\u4F11\u65F6\u95F4'
+        ),
+        _react3.default.createElement(
+          'ul',
+          { className: 'query-criteria' },
+          _react3.default.createElement(
+            'li',
+            null,
+            _react3.default.createElement(
+              'span',
+              null,
+              '\u9879\u76EE\uFF1A'
+            ),
+            _react3.default.createElement(
+              'select',
+              null,
+              _react3.default.createElement(
+                'option',
+                null,
+                '\u6D6A\u6F6E'
+              ),
+              _react3.default.createElement(
+                'option',
+                null,
+                '\u8FEA\u7231\u65AF'
+              )
+            )
+          ),
+          _react3.default.createElement(
+            'li',
+            null,
+            _react3.default.createElement(
+              'span',
+              null,
+              '\u52A0\u73ED\u7C7B\u578B\uFF1A'
+            ),
+            _react3.default.createElement(
+              'select',
+              null,
+              _react3.default.createElement(
+                'option',
+                null,
+                '\u5F85\u5BA1\u6279'
+              ),
+              _react3.default.createElement(
+                'option',
+                null,
+                '\u5F85\u5BA1\u6279'
+              )
+            )
+          )
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'query-content-list' },
+          _react3.default.createElement(
+            'table',
+            { width: '100%' },
+            _react3.default.createElement(
+              'thead',
+              null,
+              _react3.default.createElement(
+                'tr',
+                null,
+                _react3.default.createElement(
+                  'th',
+                  null,
+                  '\u5E8F\u53F7'
+                ),
+                _react3.default.createElement(
+                  'th',
+                  null,
+                  '\u9879\u76EE'
+                ),
+                _react3.default.createElement(
+                  'th',
+                  null,
+                  '\u4E8B\u7531'
+                ),
+                _react3.default.createElement(
+                  'th',
+                  null,
+                  '\u5F00\u59CB\u65F6\u95F4'
+                ),
+                _react3.default.createElement(
+                  'th',
+                  null,
+                  '\u7ED3\u675F\u65F6\u95F4'
+                ),
+                _react3.default.createElement(
+                  'th',
+                  null,
+                  '\u52A0\u73ED\u65F6\u957F'
+                ),
+                _react3.default.createElement(
+                  'th',
+                  null,
+                  '\u5DE5\u4F5C\u5185\u5BB9'
+                ),
+                _react3.default.createElement(
+                  'th',
+                  null,
+                  '\u72B6\u6001'
+                )
+              )
+            ),
+            _react3.default.createElement(
+              'tbody',
+              null,
+              datas.map(function (d, index) {
+                return _react3.default.createElement(
+                  'tr',
+                  { key: index },
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    index + 1
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.project
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.type
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.startTime
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.endTime
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.whenLong
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.jobContent
+                  ),
+                  _react3.default.createElement(
+                    'td',
+                    null,
+                    d.state
+                  )
+                );
+              })
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return RestComponent;
+}(_react2.Component));
+
+exports.default = RestComponent;
